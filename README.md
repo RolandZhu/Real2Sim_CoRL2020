@@ -1,4 +1,11 @@
 
+# Install
+- Install [PyPhysX](https://github.com/petrikvladimir/pyphysx/) with CMake > 3.15 and pip
+- Install Pytorch 1.12.1+cu116 with [pip](https://pytorch.org/get-started/previous-versions/#linux-and-windows-1)
+- Install neural_renderer according to this [post](https://blog.csdn.net/axept/article/details/127359947) in `./neural_renderer`
+- Install rlpyt in`./rlpyt` with `pip install -e .`
+- Install rlpyt_utils with `pip install --upgrade git+https://github.com/petrikvladimir/rlpyt_utils.git@master`
+
 # About
 This repository contains code for the CoRL 2020 submission titled **Learning Object Manipulation Skills via Approximate State Estimation from Real Videos**.
 In case of any question contact us at *vladimir.petrik@cvut.cz* or *makarand.tapaswi@inria.fr*.

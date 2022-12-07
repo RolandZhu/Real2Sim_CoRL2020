@@ -5,14 +5,14 @@ def options():
     parser = argparse.ArgumentParser(description='STH Real2Sim')
 
     parser.add_argument('--notes', default='', type=str, help='Notes on the experiment')
-    parser.add_argument('--save_results', action='store_true', default=False, help='Copy states and final rendered GIFs to results folders')
+    parser.add_argument('--save_results', action='store_true', default=True, help='Copy states and final rendered GIFs to results folders')
 
     #### DATA PARAMETERS ####
     parser.add_argument('--video_ids', default=[1664], nargs='+', type=int, help='Which videos to process')
     parser.add_argument('--num_obj', default=1, type=int, help='Number of objects to track in video')
     parser.add_argument('--touch_hand', action='store_true', default=False, help='Use info about handobj-in-contact to merge states')
     parser.add_argument('--action_phase', type=str, default='FULL', help='Trim videos to frames where action happens: [FULL] | GT | PRED')
-    parser.add_argument('--sthelse_masks', action='store_true', default=False, help='Use segmentation masks obtained with SomethingElse annotations')
+    parser.add_argument('--sthelse_masks', action='store_true', default=True, help='Use segmentation masks obtained with SomethingElse annotations')
 
     #### LOSS PARAMETERS ####
     parser.add_argument('--lossw', nargs='+', type=str, default=[], help='Key-value pairs of loss weights, default is 1')

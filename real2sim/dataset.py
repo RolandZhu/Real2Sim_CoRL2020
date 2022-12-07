@@ -15,6 +15,7 @@ import torch.utils.data as data_utils
 
 # Local imports
 sys.path.append('..')
+sys.path.append(os.getcwd())
 from utils.paths import *
 from utils import sth_dataset
 from preprocessing import track_seg

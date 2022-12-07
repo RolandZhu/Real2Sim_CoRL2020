@@ -18,8 +18,8 @@ from utils import sth_dataset
 
 # Third-party
 from utils import np_box_ops
-sys.path.append('../../thirdparty/sort/')
-from sort import Sort
+# sys.path.append('../../thirdparty/sort/')
+# from sort import Sort
 
 
 def filter_mask(mask, bbox):

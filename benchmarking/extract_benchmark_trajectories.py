@@ -3,7 +3,8 @@
 # Copyright (c) CTU -- All Rights Reserved
 # Created on: 2020-05-8
 #     Author: Vladimir Petrik <vladimir.petrik@cvut.cz>
-
+import os
+import sys
 from pathlib import Path
 import numpy as np
 import pandas as pd
@@ -14,6 +15,7 @@ from rlpyt.samplers.serial.sampler import SerialSampler
 from rlpyt_utils import args
 from rlpyt_utils.agents_nn import AgentPgDiscrete, AgentPgContinuous
 
+sys.path.append(os.getcwd())
 from policy_learning.agents import ModelPgNNContinuousSelective
 from simulation.utils.rotations import *
 from simulation.envs import GripperCylinderEnv
@@ -22,9 +24,9 @@ from tqdm import tqdm
 import quaternion as npq
 
 parser = args.get_default_rl_parser()
-parser.add_argument('-seed', type=int, default=0)
-parser.add_argument('benchmark_file', type=str)
-parser.add_argument('output_dir')
+parser.add_argument('--seed', type=int, default=0)
+parser.add_argument('--benchmark_file', default='data/benchmark_specification/benchmark_easy.csv', type=str)
+parser.add_argument('--output_dir', default='data/policies')
 parser.add_argument('--render', dest='render', action='store_true')
 parser.add_argument('--realtime', dest='realtime', action='store_true')
 parser.add_argument('--without_object_obs', dest='without_object_obs', action='store_true')
